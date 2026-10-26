@@ -105,10 +105,10 @@ void inicializarSensorNO2() {
 float lerConcentracaoNO2() {
     // Leitura do valor analógico
     int valorBruto = analogRead(PINO_ANALOGICO_NO2);
-    valorBruto = 2*valorBruto
     
     // Conversão para tensão
     float tensao = (valorBruto / (float)RESOLUCAO_ADC) * TENSAO_REFERENCIA_NO2;
+    tensao = 2*tensao
     
     // Cálculo da concentração de NO2 em ppm
     // Fórmula: ppm = (Vout - Vlimpo) / Sensibilidade
