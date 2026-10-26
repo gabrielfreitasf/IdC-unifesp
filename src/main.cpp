@@ -108,6 +108,7 @@ float lerConcentracaoNO2() {
     
     // Conversão para tensão
     float tensao = (valorBruto / (float)RESOLUCAO_ADC) * TENSAO_REFERENCIA_NO2;
+    tensao = 2*tensao
     
     // Cálculo da concentração de NO2 em ppm
     // Fórmula: ppm = (Vout - Vlimpo) / Sensibilidade
